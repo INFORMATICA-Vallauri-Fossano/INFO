@@ -1,0 +1,7 @@
+C:\Users\Achar\Desktop\COMPITI 2025\INFO\CompitoVacanze2025\CompitoVacanze2025\bin\Debug\data\dbBOOKS.mdf
+C:\Users\Achar\Desktop\COMPITI 2025\INFO\CompitoVacanze2025\CompitoVacanze2025\obj\Debug\CompitoVacanze2025.csproj.AssemblyReference.cache
+C:\Users\Achar\Desktop\COMPITI 2025\INFO\CompitoVacanze2025\CompitoVacanze2025\obj\Debug\CompitoVacanze2025.Properties.Resources.resources
+C:\Users\Achar\Desktop\COMPITI 2025\INFO\CompitoVacanze2025\CompitoVacanze2025\obj\Debug\CompitoVacanze2025.csproj.GenerateResource.cache
+C:\Users\Achar\Desktop\COMPITI 2025\INFO\CompitoVacanze2025\CompitoVacanze2025\obj\Debug\CompitoVacanze2025.csproj.CoreCompileInputs.cache
+C:\Users\Achar\Desktop\COMPITI 2025\INFO\CompitoVacanze2025\CompitoVacanze2025\obj\Debug\CompitoVacanze2025.exe
+C:\Users\Achar\Desktop\COMPITI 2025\INFO\CompitoVacanze2025\CompitoVacanze2025\obj\Debug\CompitoVacanze2025.pdb
