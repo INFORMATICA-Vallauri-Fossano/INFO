@@ -22,3 +22,11 @@ imma take 20 minutes to gather data from my books
 10:57
 
 ngl i'm quite slow at using a pc, i'll improve. Oh i just inserted the first book, author, genre, reader and so on.
+
+yea happened a lot and broke the project, hope now im fine
+
+12:00 want to cease it today
+
+less do it
+
+godo ho creato i controller per lettori e libri
