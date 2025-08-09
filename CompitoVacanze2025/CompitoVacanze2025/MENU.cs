@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//
+using CompitoVacanze2025.Views;
 
 namespace CompitoVacanze2025
 {
@@ -15,6 +17,12 @@ namespace CompitoVacanze2025
         public MENU()
         {
             InitializeComponent();
+        }
+
+        private void btnManagerLettori_Click(object sender, EventArgs e)
+        {
+            LettoriManager lettoriManager = new LettoriManager();
+            lettoriManager.ShowDialog();
         }
     }
 }

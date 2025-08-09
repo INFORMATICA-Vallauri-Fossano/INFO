@@ -32,7 +32,7 @@ namespace CompitoVacanze2025.Models
             get => cognome;
             set
             {
-                if (RegexUtilities.IsSafeIdentifier(value)) cognome = value;
+                if (RegexUtilities.CheckSafeSurname(value,50)) cognome = value;
                 else throw new Exception("Cognome non valido in questo sistema");
             }
         }
@@ -41,7 +41,7 @@ namespace CompitoVacanze2025.Models
 
         public string Email { get=>email;
             set { 
-                if(!AnrangoRamosLibrary.RegexUtilities.IsValidEmail(value)) throw new Exception("Email non valida");
+                if(!RegexUtilities.IsValidEmail(value)) throw new Exception("Email non valida");
                 else email = value;
             }
         }

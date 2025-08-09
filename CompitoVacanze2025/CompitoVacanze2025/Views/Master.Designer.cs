@@ -31,8 +31,8 @@
             this.btnInserimento = new System.Windows.Forms.Button();
             this.btnModifica = new System.Windows.Forms.Button();
             this.btnCancellazione = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.DGV = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
             this.SuspendLayout();
             // 
             // btnInserimento
@@ -62,35 +62,34 @@
             this.btnCancellazione.Text = "CANCELLAZIONE";
             this.btnCancellazione.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // DGV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(349, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(439, 426);
-            this.dataGridView1.TabIndex = 3;
+            this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV.Location = new System.Drawing.Point(349, 12);
+            this.DGV.Name = "DGV";
+            this.DGV.Size = new System.Drawing.Size(439, 426);
+            this.DGV.TabIndex = 3;
             // 
             // Master
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGV);
             this.Controls.Add(this.btnCancellazione);
             this.Controls.Add(this.btnModifica);
             this.Controls.Add(this.btnInserimento);
             this.Name = "Master";
             this.Text = "Master";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnInserimento;
-        private System.Windows.Forms.Button btnModifica;
-        private System.Windows.Forms.Button btnCancellazione;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView DGV;
+        public System.Windows.Forms.Button btnInserimento;
+        public System.Windows.Forms.Button btnModifica;
+        public System.Windows.Forms.Button btnCancellazione;
     }
 }

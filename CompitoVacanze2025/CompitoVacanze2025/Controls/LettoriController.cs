@@ -14,7 +14,7 @@ namespace CompitoVacanze2025.Controls
 
         private readonly static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + dbName + ";Integrated Security=True";
         // CREATE
-        static public bool CreateLettore(Lettore lettore)
+        static public bool Create(Lettore lettore)
         {
             using (var conn = new SqlConnection(connectionString))
             using (var cmd = new SqlCommand(@"INSERT INTO LETTORI (nome, cognome, email, telefono)
@@ -31,7 +31,7 @@ namespace CompitoVacanze2025.Controls
         }
 
         // READ
-        static public Lettore GetLettore(int id)
+        static public Lettore Read(int id)
         {
             using (var conn = new SqlConnection(connectionString))
             using (var cmd = new SqlCommand("SELECT * FROM LETTORI WHERE idLettore = @idLettore", conn))
@@ -54,22 +54,32 @@ namespace CompitoVacanze2025.Controls
             }
             return null;
         }
-        static public DataTable GetLettori()
+        static public List<Lettore> Read()
         {
-            DataTable lettoriTable = new DataTable();
+            List<Lettore> lettori = new List<Lettore>();
             using (var conn = new SqlConnection(connectionString))
             using (var cmd = new SqlCommand("SELECT * FROM LETTORI", conn))
             {
                 conn.Open();
                 using (var reader = cmd.ExecuteReader())
                 {
-                    lettoriTable.Load(reader);
+                    while (reader.Read())
+                    {
+                        lettori.Add(new Lettore(
+                            Convert.ToInt32(reader["idLettore"]),
+                            reader["nome"].ToString(),
+                            reader["cognome"].ToString(),
+                            reader["email"].ToString(),
+                            reader["telefono"].ToString()
+                        ));
+                    }
                 }
             }
-            return lettoriTable;
+            return lettori;
         }
+
         // UPDATE
-        static public bool UpdateLettore(Lettore lettore)
+        static public bool Update(Lettore lettore)
         {
             using (var conn = new SqlConnection(connectionString))
             using (var cmd = new SqlCommand(@"UPDATE LETTORI SET nome=@nome, cognome=@cognome, telefono=@telefono
@@ -87,7 +97,7 @@ namespace CompitoVacanze2025.Controls
         }
 
         // DELETE
-        public bool DeleteLettore(int id)
+        public static bool Delete(int id)
         {
             using (var conn = new SqlConnection(connectionString))
             using (var cmd = new SqlCommand("DELETE FROM LETTORI WHERE idLettore = @idLettore", conn))

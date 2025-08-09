@@ -30,3 +30,5 @@ yea happened a lot and broke the project, hope now im fine
 less do it
 
 godo ho creato i controller per lettori e libri
+
+made the lettori form.

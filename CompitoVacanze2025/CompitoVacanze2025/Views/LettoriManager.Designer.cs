@@ -28,31 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucLettore1 = new AnrangoRamosLibrary.UCLettore();
+            this.ucLettore = new AnrangoRamosLibrary.UCLettore();
             this.SuspendLayout();
             // 
-            // ucLettore1
+            // btnInserimento
             // 
-            this.ucLettore1.Location = new System.Drawing.Point(12, 12);
-            this.ucLettore1.Name = "ucLettore1";
-            this.ucLettore1.Size = new System.Drawing.Size(237, 173);
-            this.ucLettore1.TabIndex = 4;
+            this.btnInserimento.Click += new System.EventHandler(this.btnInserimento_Click);
+            // 
+            // btnModifica
+            // 
+            this.btnModifica.Click += new System.EventHandler(this.btnModifica_Click);
+            // 
+            // btnCancellazione
+            // 
+            this.btnCancellazione.Click += new System.EventHandler(this.btnCancellazione_Click);
+            // 
+            // ucLettore
+            // 
+            this.ucLettore.Cognome = "";
+            this.ucLettore.Email = "";
+            this.ucLettore.Id = 0;
+            this.ucLettore.Location = new System.Drawing.Point(12, 12);
+            this.ucLettore.Name = "ucLettore";
+            this.ucLettore.Nome = "";
+            this.ucLettore.Size = new System.Drawing.Size(237, 173);
+            this.ucLettore.TabIndex = 4;
+            this.ucLettore.Telefono = "";
             // 
             // LettoriManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ucLettore1);
+            this.Controls.Add(this.ucLettore);
             this.Name = "LettoriManager";
             this.Text = "LettoriManager";
-            this.Controls.SetChildIndex(this.ucLettore1, 0);
+            this.Controls.SetChildIndex(this.btnInserimento, 0);
+            this.Controls.SetChildIndex(this.btnModifica, 0);
+            this.Controls.SetChildIndex(this.btnCancellazione, 0);
+            this.Controls.SetChildIndex(this.ucLettore, 0);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private AnrangoRamosLibrary.UCLettore ucLettore1;
+        private AnrangoRamosLibrary.UCLettore ucLettore;
     }
 }

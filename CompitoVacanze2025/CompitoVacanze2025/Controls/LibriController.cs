@@ -20,7 +20,7 @@ namespace CompitoVacanze2025.Controls
         /// </summary>
         /// <param name="libro"></param>
         /// <returns></returns>
-        static public bool CreateLibro(Libro libro)
+        static public bool Create(Libro libro)
         {
             using (var conn = new SqlConnection(connectionString))
             using (var cmd = new SqlCommand(@"INSERT INTO LIBRI (codiceISBN, titolo, numeroPagine, dataPubblicazione, collocazione, copertina, casaEditrice,_idGenere)
@@ -41,7 +41,7 @@ namespace CompitoVacanze2025.Controls
         }
 
         // READ
-        static public Libro GetLibro(string codiceISBN)
+        static public Libro Read(string codiceISBN)
         {
             using (var conn = new SqlConnection(connectionString))
             using (var cmd = new SqlCommand("SELECT * FROM LIBRI WHERE codiceISBN = @isbn", conn))
@@ -68,7 +68,7 @@ namespace CompitoVacanze2025.Controls
             }
             return null;
         }
-        static public DataTable GetLibri()
+        static public DataTable Read()
         {
             DataTable libriTable = new DataTable();
             using (var conn = new SqlConnection(connectionString))
@@ -84,7 +84,7 @@ namespace CompitoVacanze2025.Controls
         }
 
         // UPDATE
-        public static bool UpdateLibro(Libro libro)
+        public static bool Update(Libro libro)
         {
             using (var conn = new SqlConnection(connectionString))
             using (var cmd = new SqlCommand(@"UPDATE LIBRI SET titolo=@titolo, numeroPagine=@pagine, dataPubblicazione=@data, collocazione=@collocazione, copertina=@copertina, casaEditrice=@editrice, disponibile=@disponibile, _idGenere=@_idGenere
@@ -104,7 +104,7 @@ namespace CompitoVacanze2025.Controls
                 return cmd.ExecuteNonQuery() == 1;
             }
         }
-        public static bool UpdateDisponibilitaLibro(string codiceISBN, bool disponibile)
+        public static bool UpdateDisponibilita(string codiceISBN, bool disponibile)
         {
             using (var conn = new SqlConnection(connectionString))
             using (var cmd = new SqlCommand("UPDATE LIBRI SET disponibile = @disponibile WHERE codiceISBN = @isbn", conn))
@@ -117,7 +117,7 @@ namespace CompitoVacanze2025.Controls
         }
 
         // DELETE
-        public static bool DeleteLibro(string codiceISBN)
+        public static bool Delete(string codiceISBN)
         {
             using (var conn = new SqlConnection(connectionString))
             using (var cmd = new SqlCommand("DELETE FROM LIBRI WHERE codiceISBN = @isbn", conn))
