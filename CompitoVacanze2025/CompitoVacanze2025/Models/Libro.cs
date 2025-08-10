@@ -18,7 +18,7 @@ namespace CompitoVacanze2025.Models
         private string copertina;
         private string casaEditrice;
         public bool Disponibile;
-        public int _IdGenere;
+        public int _IdGenere { get; set; }
 
             public Libro(
                 string _codiceISBN,
@@ -90,7 +90,7 @@ namespace CompitoVacanze2025.Models
             get => copertina;
             set
             {
-                if(RegexUtilities.CheckAuthorizedPath(value, "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\data\\copertine\\"))
+                if(RegexUtilities.CheckAuthorizedPath(value, ""))
                     copertina = value;
             }
         }
@@ -102,6 +102,9 @@ namespace CompitoVacanze2025.Models
                 if(RegexUtilities.CheckSafeTitle(value,50)) casaEditrice = value;
             }
         }
-
+        public override string ToString()
+        {
+            return $"{CodiceISBN} - {Titolo} - {NumeroPagine} pagine - {DataPubblicazione} - {Collocazione} - {Copertina} - {CasaEditrice} - Disponibile: {Disponibile}";
+        }
     }
 }

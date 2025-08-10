@@ -97,6 +97,8 @@ namespace CompitoVacanze2025.Views
             if (Lettore == null)
                 return; // Abort operation if Lettore construction failed
 
+            if(MessageBox.Show("Sei sicuro di voler cancellare il lettore selezionato?\n"+Lettore.ToString(), "Conferma Cancellazione", MessageBoxButtons.YesNo) != DialogResult.Yes)
+                return;
             if (LettoriController.Delete(Lettore.IdLettore))
             {
                 MessageBox.Show("Lettore cancellato con successo!");

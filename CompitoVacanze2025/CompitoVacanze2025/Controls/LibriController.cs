@@ -68,19 +68,32 @@ namespace CompitoVacanze2025.Controls
             }
             return null;
         }
-        static public DataTable Read()
+        static public List<Libro> Read()
         {
-            DataTable libriTable = new DataTable();
+            List<Libro> libri = new List<Libro>();
             using (var conn = new SqlConnection(connectionString))
             using (var cmd = new SqlCommand("SELECT * FROM LIBRI", conn))
             {
                 conn.Open();
                 using (var reader = cmd.ExecuteReader())
                 {
-                    libriTable.Load(reader);
+                    while (reader.Read())
+                    {
+                        libri.Add(new Libro(
+                            reader["codiceISBN"].ToString(),
+                            reader["titolo"].ToString(),
+                            reader["numeroPagine"].ToString(),
+                            Convert.ToDateTime(reader["dataPubblicazione"]).ToShortDateString(),
+                            reader["collocazione"].ToString(),
+                            reader["copertina"].ToString(),
+                            reader["casaEditrice"].ToString(),
+                            Convert.ToBoolean(reader["disponibile"]),
+                            Convert.ToInt32(reader["_idGenere"])
+                        ));
+                    }
                 }
+                return libri;
             }
-            return libriTable;
         }
 
         // UPDATE

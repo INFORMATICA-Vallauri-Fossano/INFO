@@ -59,7 +59,7 @@ namespace CompitoVacanze2025.Models
 
         public override string ToString()
         {
-            return $"{Nome} {Cognome} - Email: {Email}, Telefono: {Telefono}";
+            return $"Id: {IdLettore} - {Nome} {Cognome} - Email: {Email}, Telefono: {Telefono}";
         }
     }
 }

@@ -50,6 +50,7 @@
             this.btnManagerLibri.TabIndex = 1;
             this.btnManagerLibri.Text = "LIBRI";
             this.btnManagerLibri.UseVisualStyleBackColor = true;
+            this.btnManagerLibri.Click += new System.EventHandler(this.btnManagerLibri_Click);
             // 
             // MENU
             // 

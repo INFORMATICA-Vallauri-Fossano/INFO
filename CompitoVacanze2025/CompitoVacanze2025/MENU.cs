@@ -24,5 +24,11 @@ namespace CompitoVacanze2025
             LettoriManager lettoriManager = new LettoriManager();
             lettoriManager.ShowDialog();
         }
+
+        private void btnManagerLibri_Click(object sender, EventArgs e)
+        {
+            LibriManager libriManager = new LibriManager();
+            libriManager.ShowDialog();
+        }
     }
 }
