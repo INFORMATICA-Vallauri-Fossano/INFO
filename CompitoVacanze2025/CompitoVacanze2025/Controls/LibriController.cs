@@ -16,27 +16,40 @@ namespace CompitoVacanze2025.Controls
         // CREATE
         /// <summary>
         /// the creation of a book supposes that it is automatically diponible
-        /// 
+        /// <br>returns false in case of repeated primary key
         /// </summary>
         /// <param name="libro"></param>
         /// <returns></returns>
         static public bool Create(Libro libro)
         {
             using (var conn = new SqlConnection(connectionString))
-            using (var cmd = new SqlCommand(@"INSERT INTO LIBRI (codiceISBN, titolo, numeroPagine, dataPubblicazione, collocazione, copertina, casaEditrice,_idGenere)
-                                              VALUES (@isbn, @titolo, @pagine, @data, @collocazione, @copertina, @editrice, @_idGenere)", conn))
             {
-                cmd.Parameters.AddWithValue("@isbn", libro.CodiceISBN);
-                cmd.Parameters.AddWithValue("@titolo", libro.Titolo);
-                cmd.Parameters.AddWithValue("@pagine", libro.NumeroPagine);
-                cmd.Parameters.AddWithValue("@data", libro.DataPubblicazione);
-                cmd.Parameters.AddWithValue("@collocazione", libro.Collocazione);
-                cmd.Parameters.AddWithValue("@copertina", libro.Copertina);
-                cmd.Parameters.AddWithValue("@editrice", libro.CasaEditrice);
-                cmd.Parameters.AddWithValue("@_idGenere", libro._IdGenere);
+                using (var cmd = new SqlCommand("SELECT COUNT(*) FROM LIBRI WHERE codiceISBN = @isbn", conn))
+                {
+                    cmd.Parameters.AddWithValue("@isbn", libro.CodiceISBN);
+                    conn.Open();
+                    int count = (int)cmd.ExecuteScalar();
+                    if (count > 0)
+                    {
+                        return false; // ISBN already exists
+                    }
+                    conn.Close();
+                }
+                using (var cmd = new SqlCommand(@"INSERT INTO LIBRI (codiceISBN, titolo, numeroPagine, dataPubblicazione, collocazione, copertina, casaEditrice,_idGenere)
+                                              VALUES (@isbn, @titolo, @pagine, @data, @collocazione, @copertina, @editrice, @_idGenere)", conn))
+                {
+                    cmd.Parameters.AddWithValue("@isbn", libro.CodiceISBN);
+                    cmd.Parameters.AddWithValue("@titolo", libro.Titolo);
+                    cmd.Parameters.AddWithValue("@pagine", libro.NumeroPagine);
+                    cmd.Parameters.AddWithValue("@data", libro.DataPubblicazione);
+                    cmd.Parameters.AddWithValue("@collocazione", libro.Collocazione);
+                    cmd.Parameters.AddWithValue("@copertina", libro.Copertina);
+                    cmd.Parameters.AddWithValue("@editrice", libro.CasaEditrice);
+                    cmd.Parameters.AddWithValue("@_idGenere", libro._IdGenere);
 
-                conn.Open();
-                return cmd.ExecuteNonQuery() == 1;
+                    conn.Open();
+                    return cmd.ExecuteNonQuery() == 1;
+                }
             }
         }
 

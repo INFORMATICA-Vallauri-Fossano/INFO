@@ -58,6 +58,7 @@ namespace CompitoVacanze2025.Models
             set
             {
                 numeroPagine=RegexUtilities.ToPositiveInt(value);
+                if (numeroPagine < 1) throw new Exception("Il numero di pagine deve essere maggiore di zero");
             }
         }
         public string DataPubblicazione
