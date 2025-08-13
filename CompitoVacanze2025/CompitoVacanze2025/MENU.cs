@@ -30,5 +30,11 @@ namespace CompitoVacanze2025
             LibriManager libriManager = new LibriManager();
             libriManager.ShowDialog();
         }
+
+        private void btnPrestiti_Click(object sender, EventArgs e)
+        {
+            Prestiti prestiti = new Prestiti();
+            prestiti.ShowDialog();
+        }
     }
 }
