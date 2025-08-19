@@ -35,12 +35,13 @@ namespace CompitoVacanze2025.Controls
                     }
                     conn.Close();
                 }
-                using (var cmd = new SqlCommand(@"INSERT INTO LIBRI (codiceISBN, titolo, numeroPagine, dataPubblicazione, collocazione, copertina, casaEditrice,_idGenere)
-                                              VALUES (@isbn, @titolo, @pagine, @data, @collocazione, @copertina, @editrice, @_idGenere)", conn))
+                using (var cmd = new SqlCommand(@"INSERT INTO LIBRI (codiceISBN, titolo, numeroPagine, lingua,dataPubblicazione, collocazione, copertina, casaEditrice,_idGenere)
+                                              VALUES (@isbn, @titolo, @pagine,@lingua, @data, @collocazione, @copertina, @editrice, @_idGenere)", conn))
                 {
                     cmd.Parameters.AddWithValue("@isbn", libro.CodiceISBN);
                     cmd.Parameters.AddWithValue("@titolo", libro.Titolo);
                     cmd.Parameters.AddWithValue("@pagine", libro.NumeroPagine);
+                    cmd.Parameters.AddWithValue("@lingua", libro.Lingua);
                     cmd.Parameters.AddWithValue("@data", libro.DataPubblicazione);
                     cmd.Parameters.AddWithValue("@collocazione", libro.Collocazione);
                     cmd.Parameters.AddWithValue("@copertina", libro.Copertina);
@@ -69,6 +70,7 @@ namespace CompitoVacanze2025.Controls
                             reader["codiceISBN"].ToString(),
                             reader["titolo"].ToString(),
                             reader["numeroPagine"].ToString(),
+                            reader["lingua"].ToString(),
                             Convert.ToDateTime(reader["dataPubblicazione"]).ToShortDateString(),
                             reader["collocazione"].ToString(),
                             reader["copertina"].ToString(),
@@ -96,6 +98,7 @@ namespace CompitoVacanze2025.Controls
                             reader["codiceISBN"].ToString(),
                             reader["titolo"].ToString(),
                             reader["numeroPagine"].ToString(),
+                            reader["lingua"].ToString(),
                             Convert.ToDateTime(reader["dataPubblicazione"]).ToShortDateString(),
                             reader["collocazione"].ToString(),
                             reader["copertina"].ToString(),
@@ -113,12 +116,13 @@ namespace CompitoVacanze2025.Controls
         public static bool Update(Libro libro)
         {
             using (var conn = new SqlConnection(connectionString))
-            using (var cmd = new SqlCommand(@"UPDATE LIBRI SET titolo=@titolo, numeroPagine=@pagine, dataPubblicazione=@data, collocazione=@collocazione, copertina=@copertina, casaEditrice=@editrice, disponibile=@disponibile, _idGenere=@_idGenere
+            using (var cmd = new SqlCommand(@"UPDATE LIBRI SET titolo=@titolo, numeroPagine=@pagine,lingua=@lingua, dataPubblicazione=@data, collocazione=@collocazione, copertina=@copertina, casaEditrice=@editrice, disponibile=@disponibile, _idGenere=@_idGenere
                                               WHERE codiceISBN=@isbn", conn))
             {
                 cmd.Parameters.AddWithValue("@isbn", libro.CodiceISBN);
                 cmd.Parameters.AddWithValue("@titolo", libro.Titolo);
                 cmd.Parameters.AddWithValue("@pagine", libro.NumeroPagine);
+                    cmd.Parameters.AddWithValue("@lingua", libro.Lingua);
                 cmd.Parameters.AddWithValue("@data", libro.DataPubblicazione);
                 cmd.Parameters.AddWithValue("@collocazione", libro.Collocazione);
                 cmd.Parameters.AddWithValue("@copertina", libro.Copertina);

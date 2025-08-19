@@ -13,6 +13,7 @@ namespace CompitoVacanze2025.Models
         private string codiceISBN;
         private string titolo;
         private int numeroPagine;
+        private string lingua;
         private DateTime dataPubblicazzione;
         private string collocazione;
         private string copertina;
@@ -23,7 +24,7 @@ namespace CompitoVacanze2025.Models
             public Libro(
                 string _codiceISBN,
                 string _titolo,
-                string _numeroPagine,
+                string _numeroPagine,string _lingua,
                 string _dataPubblicazione,
                 string _collocazione,
                 string _copertina,
@@ -34,6 +35,7 @@ namespace CompitoVacanze2025.Models
                 CodiceISBN = _codiceISBN;
                 Titolo = _titolo;
                 NumeroPagine = _numeroPagine;
+                Lingua = _lingua;
                 DataPubblicazione = _dataPubblicazione;
                 Collocazione = _collocazione;
                 Copertina = _copertina;
@@ -101,6 +103,14 @@ namespace CompitoVacanze2025.Models
             set
             {
                 if(RegexUtilities.CheckSafeTitle(value,50)) casaEditrice = value;
+            }
+        }
+        public string Lingua
+        {
+            get => lingua;
+            set
+            {
+                if (!RegexUtilities.CheckSafeTitle(value,50)) lingua = value;
             }
         }
         public override string ToString()

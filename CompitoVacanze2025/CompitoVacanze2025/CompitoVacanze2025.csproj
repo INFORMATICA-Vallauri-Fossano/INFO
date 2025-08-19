@@ -77,7 +77,8 @@
     <Compile Include="MENU.Designer.cs">
       <DependentUpon>MENU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Generi.cs" />
+    <Compile Include="Models\Autore.cs" />
+    <Compile Include="Models\Genere.cs" />
     <Compile Include="Models\Lettore.cs" />
     <Compile Include="Models\Libro.cs" />
     <Compile Include="Models\Prestito.cs" />

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//
+using CompitoVacanze2025.Views;
 namespace CompitoVacanze2025
 {
     internal static class Program
@@ -16,7 +17,16 @@ namespace CompitoVacanze2025
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MENU());
+            try
+            {
+                Application.Run(new Prestiti());
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An error occured, restarting the program");
+                Application.Run(new Prestiti());
+            }
         }
     }
 }

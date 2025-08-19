@@ -9,35 +9,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AnrangoRamosLibrary;
 
 namespace CompitoVacanze2025.Views
 {
     public partial class Prestiti : Form
     {
+        private BindingList<KeyValuePair<int, string>> lettori=new BindingList<KeyValuePair<int, string>>();
+        private List<KeyValuePair<int, string>> lettoriWaiting=new List<KeyValuePair<int, string>>();
+
+
         public Prestiti()
         {
             InitializeComponent();
-            lettori.DataSource = LettoriController.Read().ToDictionary(x => x.IdLettore, x => x.IdLettore+" "+x.Nome + " " + x.Cognome).ToList();
-            lettori.ValueMember = "Key";
-            lettori.DisplayMember = "Value";
-
-            generi.DataSource = GeneriController.Read().ToList();
-            generi.ValueMember = "Key";
-            generi.DisplayMember = "Value";
-
-            autori.DataSource = AutoriController.Read().ToList();
-            autori.ValueMember= "Key";
-            autori.DisplayMember = "Value";
-
-            //generi.Items.Insert(0, new KeyValuePair<int, string>(-1, "Tutti i generi"));
-            //autori.Items.Insert(0, new KeyValuePair<int, string>(-1, "Tutti gli autori"));
         }
         private Lettore lettore
         {
             get
             {
-                if (lettori.SelectedValue == null) return null;
-                return LettoriController.Read((int)lettori.SelectedValue);
+                if (cmbLettori.SelectedValue == null) return null;
+                return LettoriController.Read((int)cmbLettori.SelectedValue);
             }
         }
         private Libro libro { get; set; }
@@ -55,21 +46,40 @@ namespace CompitoVacanze2025.Views
                 MessageBox.Show(ex.Message);
             }
         }
-
+        private void lettori_TextUpdate(object sender, EventArgs e)
+        {
+            string filter = cmbLettori.Text.ToLower();
+            lettori.Clear();
+            foreach (var letW in lettoriWaiting) if (letW.Value.ToLower().Contains(filter)) lettori.Add(letW);
+            cmbLettori.Text = filter;
+            cmbLettori.SelectionStart = filter.Length;
+            cmbLettori.DroppedDown = true;
+        }
+        List<Libro> libri = LibriController.Read();
+        List<Autore> autori=AutoriController.Read();
+        List<Genere> generi=GeneriController.Read();
         private void search()
         {
-            var libri = LibriController.Read();
-            try
-            {
-                if(libri.Count == 0) throw new Exception("Nessun libro presente nel database");
-                if(generi.SelectedValue!=null) libri.Select(x => x._IdGenere == (int)generi.SelectedValue);
-                if (autori.SelectedValue != null) ;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
 
         }
+        private void Prestiti_Load(object sender, EventArgs e)
+        {
+            lettoriWaiting = LettoriController.Read().ToDictionary(x => x.IdLettore, x => x.IdLettore + " : " + x.Cognome + " " + x.Nome).ToList();
+            cmbLettori.DataSource = lettori;
+            cmbLettori.ValueMember = "Key";
+            cmbLettori.DisplayMember = "Value";
+
+            cmbGeneri.DataSource = GeneriController.Read().ToDictionary(g=>g.IdGenere,g=>g.Genre).ToList();
+            cmbGeneri.ValueMember = "Key";
+            cmbGeneri.DisplayMember = "Value";
+
+            cmbAutori.DataSource = AutoriController.Read().ToDictionary(a=>a.Id,a=>a.Nome+" "+a.Cognome).ToList();
+            cmbAutori.ValueMember = "Key";
+            cmbAutori.DisplayMember = "Value";
+
+            lettori_TextUpdate(null,null);
+            cmbLettori.DroppedDown=false;
+        }
+
     }
 }

@@ -18,7 +18,7 @@ namespace CompitoVacanze2025.Views
         {
             InitializeComponent();
 
-            var generiList = GeneriController.Read().ToList();
+            var generiList = GeneriController.Read().ToDictionary(libro=>libro.IdGenere,libro=>libro.ToString()).ToList();
             ucLibro.cmbGenere.DataSource = generiList;
             ucLibro.cmbGenere.ValueMember = "Key";
             ucLibro.cmbGenere.DisplayMember = "Value";
@@ -45,6 +45,7 @@ namespace CompitoVacanze2025.Views
                         ucLibro.ISBN,
                         ucLibro.Titolo,
                         ucLibro.Pagine,
+                        ucLibro.Lingua,
                         ucLibro.DataPubblicazione,
                         ucLibro.Collocazione,
                         ucLibro.Copertina,

@@ -3,68 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|c:\\users\\achar\\desktop\\compiti 2025\\info\\compitovacanze2025\\compitovacanze2025\\views\\prestiti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|solutionrelative:compitovacanze2025\\views\\prestiti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|c:\\users\\achar\\desktop\\compiti 2025\\info\\compitovacanze2025\\compitovacanze2025\\views\\prestiti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\compitovacanze2025\\views\\prestiti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|solutionrelative:compitovacanze2025\\views\\prestiti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\compitovacanze2025\\views\\librimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|solutionrelative:compitovacanze2025\\views\\librimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|c:\\users\\achar\\desktop\\compiti 2025\\info\\compitovacanze2025\\compitovacanze2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|solutionrelative:compitovacanze2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\compitovacanze2025\\controls\\libricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|solutionrelative:compitovacanze2025\\controls\\libricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|c:\\users\\achar\\desktop\\compiti 2025\\info\\compitovacanze2025\\compitovacanze2025\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|solutionrelative:compitovacanze2025\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|c:\\users\\achar\\desktop\\compiti 2025\\info\\compitovacanze2025\\compitovacanze2025\\models\\prestito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|solutionrelative:compitovacanze2025\\models\\prestito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\compitovacanze2025\\models\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|solutionrelative:compitovacanze2025\\models\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\compitovacanze2025\\controls\\lettoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|solutionrelative:compitovacanze2025\\controls\\lettoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|c:\\users\\achar\\desktop\\compiti 2025\\info\\compitovacanze2025\\compitovacanze2025\\views\\librimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|solutionrelative:compitovacanze2025\\views\\librimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\compitovacanze2025\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|solutionrelative:compitovacanze2025\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\compitovacanze2025\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|solutionrelative:compitovacanze2025\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|c:\\users\\achar\\desktop\\compiti 2025\\info\\compitovacanze2025\\compitovacanze2025\\controls\\prestiticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|solutionrelative:compitovacanze2025\\controls\\prestiticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\compitovacanze2025\\views\\prestiti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|solutionrelative:compitovacanze2025\\views\\prestiti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\compitovacanze2025\\models\\lettore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|solutionrelative:compitovacanze2025\\models\\lettore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\compitovacanze2025\\controls\\genericontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|solutionrelative:compitovacanze2025\\controls\\genericontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|c:\\users\\achar\\desktop\\compiti 2025\\info\\compitovacanze2025\\compitovacanze2025\\controls\\autoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|solutionrelative:compitovacanze2025\\controls\\autoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\compitovacanze2025\\views\\librimanager.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A17F5F7-F96B-402A-BB6E-FF8A5040DC1A}|CompitoVacanze2025\\CompitoVacanze2025.csproj|solutionrelative:compitovacanze2025\\views\\librimanager.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,98 +30,33 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LibriManager.cs",
-              "DocumentMoniker": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Views\\LibriManager.cs",
-              "RelativeDocumentMoniker": "CompitoVacanze2025\\Views\\LibriManager.cs",
-              "ToolTip": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Views\\LibriManager.cs",
-              "RelativeToolTip": "CompitoVacanze2025\\Views\\LibriManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-10T14:20:19.496Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\App.config",
-              "RelativeDocumentMoniker": "CompitoVacanze2025\\App.config",
-              "ToolTip": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\App.config",
-              "RelativeToolTip": "CompitoVacanze2025\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-08-13T00:46:59.346Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Prestiti.cs",
               "DocumentMoniker": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Views\\Prestiti.cs",
               "RelativeDocumentMoniker": "CompitoVacanze2025\\Views\\Prestiti.cs",
               "ToolTip": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Views\\Prestiti.cs",
               "RelativeToolTip": "CompitoVacanze2025\\Views\\Prestiti.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAwwDwAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAuwDYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-12T23:17:55.469Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LibriManager.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Views\\LibriManager.cs",
-              "RelativeDocumentMoniker": "CompitoVacanze2025\\Views\\LibriManager.cs",
-              "ToolTip": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Views\\LibriManager.cs [Design]",
-              "RelativeToolTip": "CompitoVacanze2025\\Views\\LibriManager.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-10T15:01:28.065Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LibriController.cs",
-              "DocumentMoniker": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Controls\\LibriController.cs",
-              "RelativeDocumentMoniker": "CompitoVacanze2025\\Controls\\LibriController.cs",
-              "ToolTip": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Controls\\LibriController.cs",
-              "RelativeToolTip": "CompitoVacanze2025\\Controls\\LibriController.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAowCUAAABnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T16:15:47.79Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LettoriController.cs",
-              "DocumentMoniker": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Controls\\LettoriController.cs",
-              "RelativeDocumentMoniker": "CompitoVacanze2025\\Controls\\LettoriController.cs",
-              "ToolTip": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Controls\\LettoriController.cs",
-              "RelativeToolTip": "CompitoVacanze2025\\Controls\\LettoriController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-10T15:22:37.871Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Libro.cs",
-              "DocumentMoniker": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Models\\Libro.cs",
-              "RelativeDocumentMoniker": "CompitoVacanze2025\\Models\\Libro.cs",
-              "ToolTip": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Models\\Libro.cs",
-              "RelativeToolTip": "CompitoVacanze2025\\Models\\Libro.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADkAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T21:30:25.867Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Program.cs",
+              "RelativeDocumentMoniker": "CompitoVacanze2025\\Program.cs",
+              "ToolTip": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Program.cs",
+              "RelativeToolTip": "CompitoVacanze2025\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T18:31:17.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Prestiti.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Views\\Prestiti.cs",
               "RelativeDocumentMoniker": "CompitoVacanze2025\\Views\\Prestiti.cs",
@@ -181,58 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MENU.cs",
-              "DocumentMoniker": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\MENU.cs",
-              "RelativeDocumentMoniker": "CompitoVacanze2025\\MENU.cs",
-              "ToolTip": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\MENU.cs",
-              "RelativeToolTip": "CompitoVacanze2025\\MENU.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAjwCQAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-10T15:19:30.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Prestito.cs",
-              "DocumentMoniker": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Models\\Prestito.cs",
-              "RelativeDocumentMoniker": "CompitoVacanze2025\\Models\\Prestito.cs",
-              "ToolTip": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Models\\Prestito.cs",
-              "RelativeToolTip": "CompitoVacanze2025\\Models\\Prestito.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADAAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T23:58:59.793Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MENU.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\MENU.cs",
-              "RelativeDocumentMoniker": "CompitoVacanze2025\\MENU.cs",
-              "ToolTip": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\MENU.cs [Design]",
-              "RelativeToolTip": "CompitoVacanze2025\\MENU.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-10T15:19:29.001Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AutoriController.cs",
-              "DocumentMoniker": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Controls\\AutoriController.cs",
-              "RelativeDocumentMoniker": "CompitoVacanze2025\\Controls\\AutoriController.cs",
-              "ToolTip": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Controls\\AutoriController.cs",
-              "RelativeToolTip": "CompitoVacanze2025\\Controls\\AutoriController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T23:45:39.431Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 3,
               "Title": "Lettore.cs",
               "DocumentMoniker": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Models\\Lettore.cs",
               "RelativeDocumentMoniker": "CompitoVacanze2025\\Models\\Lettore.cs",
@@ -240,47 +76,7 @@
               "RelativeToolTip": "CompitoVacanze2025\\Models\\Lettore.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T21:30:24.352Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "PrestitiController.cs",
-              "DocumentMoniker": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Controls\\PrestitiController.cs",
-              "RelativeDocumentMoniker": "CompitoVacanze2025\\Controls\\PrestitiController.cs",
-              "ToolTip": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Controls\\PrestitiController.cs",
-              "RelativeToolTip": "CompitoVacanze2025\\Controls\\PrestitiController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAADUAAABZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T23:57:13.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "GeneriController.cs",
-              "DocumentMoniker": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Controls\\GeneriController.cs",
-              "RelativeDocumentMoniker": "CompitoVacanze2025\\Controls\\GeneriController.cs",
-              "ToolTip": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Controls\\GeneriController.cs",
-              "RelativeToolTip": "CompitoVacanze2025\\Controls\\GeneriController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAcwB0AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-10T15:07:51.607Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "LibriManager.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Views\\LibriManager.Designer.cs",
-              "RelativeDocumentMoniker": "CompitoVacanze2025\\Views\\LibriManager.Designer.cs",
-              "ToolTip": "C:\\Users\\Achar\\Desktop\\COMPITI 2025\\INFO\\CompitoVacanze2025\\CompitoVacanze2025\\Views\\LibriManager.Designer.cs",
-              "RelativeToolTip": "CompitoVacanze2025\\Views\\LibriManager.Designer.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAArwDUAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-10T15:18:59.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-12T21:30:24.352Z"
             }
           ]
         }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using CompitoVacanze2025.Models;
 namespace CompitoVacanze2025.Controls
 {
     internal class GeneriController
@@ -13,9 +14,9 @@ namespace CompitoVacanze2025.Controls
         static string dbName = Directory.GetParent(System.Reflection.Assembly.GetExecutingAssembly().Location).Parent.Parent.FullName.ToString() + @"\App_Data\dbBOOKS.mdf";
 
         private readonly static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + dbName + ";Integrated Security=True";
-        static public Dictionary<int, string> Read()
+        static public List<Genere> Read()
         {
-            Dictionary<int, string> generi=new Dictionary<int, string>();
+            List<Genere> generi =new List<Genere>();
             using (var conn = new SqlConnection(connectionString))
             using (var cmd = new SqlCommand("SELECT * FROM GENERI", conn))
             {
@@ -24,7 +25,7 @@ namespace CompitoVacanze2025.Controls
                 {
                     while (reader.Read())
                     {
-                        generi.Add(Convert.ToInt32(reader["idGenere"]), reader["genere"].ToString());
+                        generi.Add(new Genere(Convert.ToInt32(reader["idGenere"]), reader["genere"].ToString()));
                     }
                 }
             }

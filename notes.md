@@ -34,3 +34,6 @@ godo ho creato i controller per lettori e libri
 made the lettori form.
 
 made the libri form but i still need to test the buttons.
+
+there s an error but it s taking me too much effort and time to solve it. I don t believe it deserves this attention. The error occurs when you esc the dropdown in dropped down mod with a non valid value.
+
