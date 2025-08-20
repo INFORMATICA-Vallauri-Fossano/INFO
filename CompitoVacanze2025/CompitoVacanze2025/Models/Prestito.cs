@@ -52,5 +52,9 @@ namespace CompitoVacanze2025.Models
             DataInizio = inizio;
             DataFine = fine;
         }
+        public override string ToString()
+        {
+            return $"Lettore: {IdLettore} - Libro:{CodiceISBN}";
+        }
     }
 }

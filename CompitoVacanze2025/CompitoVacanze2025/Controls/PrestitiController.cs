@@ -24,8 +24,6 @@ namespace CompitoVacanze2025.Controls
                 conn.Open();
                 using (var reader = cmd.ExecuteReader())
                 {
-                    while (reader.Read())
-                    {
                         while (reader.Read())
                         {
                             var prestito = new Prestito(
@@ -37,7 +35,6 @@ namespace CompitoVacanze2025.Controls
                             );
                             prestiti.Add(prestito);
                         }
-                    }
                 }
             }
             return prestiti;
