@@ -44,8 +44,9 @@ namespace CompitoVacanze2025.Models
                 }
             }
         }
-        public Prestito(int _idlettore,string _isbn, DateTime inizio, DateTime? fine)
+        public Prestito(int _idprestito,int _idlettore,string _isbn, DateTime inizio, DateTime? fine)
         {
+            IdPrestito = _idprestito;
             CodiceISBN=_isbn;
             IdLettore = _idlettore;
             DataInizio = inizio;

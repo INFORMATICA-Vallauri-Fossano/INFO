@@ -71,6 +71,7 @@
     <Compile Include="Controls\LettoriController.cs" />
     <Compile Include="Controls\LibriController.cs" />
     <Compile Include="Controls\PrestitiController.cs" />
+    <Compile Include="Controls\ScrivonoController.cs" />
     <Compile Include="MENU.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +83,7 @@
     <Compile Include="Models\Lettore.cs" />
     <Compile Include="Models\Libro.cs" />
     <Compile Include="Models\Prestito.cs" />
+    <Compile Include="Models\Scrivono.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\LettoriManager.cs">
@@ -108,6 +110,12 @@
     <Compile Include="Views\Prestiti.Designer.cs">
       <DependentUpon>Prestiti.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Restituzioni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Restituzioni.Designer.cs">
+      <DependentUpon>Restituzioni.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MENU.resx">
       <DependentUpon>MENU.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Prestiti.resx">
       <DependentUpon>Prestiti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Restituzioni.resx">
+      <DependentUpon>Restituzioni.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

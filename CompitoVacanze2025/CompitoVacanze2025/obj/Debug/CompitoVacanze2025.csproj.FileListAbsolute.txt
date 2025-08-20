@@ -16,3 +16,5 @@ C:\Users\Achar\Desktop\COMPITI 2025\INFO\CompitoVacanze2025\CompitoVacanze2025\o
 C:\Users\Achar\Desktop\COMPITI 2025\INFO\CompitoVacanze2025\CompitoVacanze2025\obj\Debug\CompitoVacanze2025.Views.LibriManager.resources
 C:\Users\Achar\Desktop\COMPITI 2025\INFO\CompitoVacanze2025\CompitoVacanze2025\bin\Debug\AnrangoRamosLibrary.dll.config
 C:\Users\Achar\Desktop\COMPITI 2025\INFO\CompitoVacanze2025\CompitoVacanze2025\obj\Debug\CompitoVacanze2025.Views.Prestiti.resources
+C:\Users\Achar\Desktop\COMPITI 2025\INFO\CompitoVacanze2025\CompitoVacanze2025\obj\Debug\CompitoVacanze2025.exe.config
+C:\Users\Achar\Desktop\COMPITI 2025\INFO\CompitoVacanze2025\CompitoVacanze2025\obj\Debug\CompitoVacanze2025.Views.Restituzioni.resources

@@ -38,7 +38,7 @@ namespace CompitoVacanze2025.Views
             {
                 if (lettore == null) throw new Exception("Scegliere un lettore");
                 if(libro==null) throw new Exception("Scegliere un libro");
-                if (PrestitiController.Create(new Prestito(lettore.IdLettore, libro.CodiceISBN, DateTime.Now, null)))
+                if (PrestitiController.Create(new Prestito(-1,lettore.IdLettore, libro.CodiceISBN, DateTime.Now, null)))
                     MessageBox.Show("Prestito effettuato con successo");
             }
             catch (Exception ex)

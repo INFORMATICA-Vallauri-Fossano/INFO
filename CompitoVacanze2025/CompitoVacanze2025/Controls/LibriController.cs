@@ -134,17 +134,7 @@ namespace CompitoVacanze2025.Controls
                 return cmd.ExecuteNonQuery() == 1;
             }
         }
-        public static bool UpdateDisponibilita(string codiceISBN, bool disponibile)
-        {
-            using (var conn = new SqlConnection(connectionString))
-            using (var cmd = new SqlCommand("UPDATE LIBRI SET disponibile = @disponibile WHERE codiceISBN = @isbn", conn))
-            {
-                cmd.Parameters.AddWithValue("@isbn", codiceISBN);
-                cmd.Parameters.AddWithValue("@disponibile", disponibile);
-                conn.Open();
-                return cmd.ExecuteNonQuery() == 1;
-            }
-        }
+        
 
         // DELETE
         public static bool Delete(string codiceISBN)
