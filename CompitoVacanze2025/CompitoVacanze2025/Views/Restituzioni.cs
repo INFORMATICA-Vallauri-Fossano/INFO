@@ -14,19 +14,16 @@ namespace CompitoVacanze2025.Views
 {
     public partial class Restituzioni : Form
     {
-        private int IdLettore { get; set; }
-        public Restituzioni(int idLettore)
-        {
-            InitializeComponent();
-            IdLettore = idLettore;
-        }
+
+        List<Prestito> prestiti = PrestitiController.Read(); 
+        BindingList<Libro> books= new BindingList<Libro>();
+
         BindingList<KeyValuePair<int,string>> lettori = new BindingList<KeyValuePair<int, string>>();
         List<KeyValuePair<int, string>> lettoriWaiting = LettoriController.Read().ToDictionary(l=>l.IdLettore,l=>l.IdLettore+": "+l.Cognome+" "+l.Nome).ToList();
         public Restituzioni()
         {
             InitializeComponent();
         }
-
         private void cmbLettori_TextUpdate(object sender, EventArgs e)
         {
             string filter = cmbLettori.Text.ToLower();
@@ -35,7 +32,7 @@ namespace CompitoVacanze2025.Views
             cmbLettori.Text = filter;
             cmbLettori.SelectionStart = filter.Length;
             cmbLettori.DroppedDown = true;
-    }
+        }
 
         private void Restituzioni_Load(object sender, EventArgs e)
         {
@@ -44,19 +41,32 @@ namespace CompitoVacanze2025.Views
             cmbLettori.ValueMember = "Key";
 
             cmbLettori_TextUpdate(null, null);
-            if(IdLettore > 0)
-            {
-                cmbLettori.SelectedValue = IdLettore;
-            }
-            else
-            {
-                cmbLettori.SelectedIndex = -1;
-            }
+            dgvLibriInPrestito.DataSource = books;
+            //events
+            cmbLettori.SelectedValueChanged += cmbLettori_SelectedValueChanged;
         }
 
         private void btnRestituisci_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmbLettori_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(cmbLettori.SelectedIndex != -1)
+            {
+                var myPrestiti=prestiti.Where(p=>p.DataFine==(DateTime?)null&&p.IdLettore==(int)cmbLettori.SelectedValue).ToList();
+                books.Clear();
+                foreach (var pres in myPrestiti) books.Add(LibriController.Read(pres.CodiceISBN));
+            }
+        }
+        private Prestito prestito;
+        private void dgvLibriInPrestito_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1 && e.RowIndex < dgvLibriInPrestito.RowCount - 1)
+            {
+                
+            }
         }
     }
 }

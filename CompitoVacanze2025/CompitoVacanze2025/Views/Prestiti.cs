@@ -22,6 +22,7 @@ namespace CompitoVacanze2025.Views
         private int IdLettore { get => (int)cmbLettori.SelectedValue; }
         private int IdGenere { get => (int)cmbGeneri.SelectedValue; }
         private int IdAutore { get=>(int)cmbAutori.SelectedValue;}
+        private bool VuoleRestituire { get; set; } = false;
 
         private Prestito prestito = new Prestito(-1,-1,"0000000000000",DateTime.Now,null);
         //collections
@@ -50,15 +51,17 @@ namespace CompitoVacanze2025.Views
                     if (prestitiLettore.Count > 2)
                     {
                         if (MessageBox.Show("Hai già tre libri in prestito, vuoi andare a restituirne uno? ", "Conferma restituire", MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
-                            ShowDialog(new Restituzioni());
-                    }
-                        else
                         {
-                            prestito.IdLettore = IdLettore;
-                            MessageBox.Show(string.Join(" | ", prestitiLettore.Select(p=>p.ToString())));
-                        
-                        filtraLibri();
+                            Close();
                         }
+                    }
+                    else
+                    {
+                        prestito.IdLettore = IdLettore;
+                        MessageBox.Show(string.Join(" | ", prestitiLettore.Select(p => p.ToString())));
+
+                        filtraLibri();
+                    }
 
                 }
                 catch (Exception ex)
@@ -148,5 +151,12 @@ namespace CompitoVacanze2025.Views
         {
          filtraLibri();
         }
+
+        private void dgvLibriPrestabili_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex!=-1&&e.RowIndex<dgvLibriPrestabili.Rows.Count-1)
+                prestito.CodiceISBN = dgvLibriPrestabili.Rows[e.RowIndex].Cells["PK"].Value.ToString();
+        }
+
     }
 }

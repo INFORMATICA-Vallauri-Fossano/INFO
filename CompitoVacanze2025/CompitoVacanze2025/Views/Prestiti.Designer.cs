@@ -78,6 +78,7 @@
             this.dgvLibriPrestabili.RowHeadersWidth = 51;
             this.dgvLibriPrestabili.Size = new System.Drawing.Size(317, 247);
             this.dgvLibriPrestabili.TabIndex = 7;
+            this.dgvLibriPrestabili.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibriPrestabili_RowEnter);
             // 
             // cmbLettori
             // 

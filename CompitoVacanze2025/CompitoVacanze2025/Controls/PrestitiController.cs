@@ -43,17 +43,16 @@ namespace CompitoVacanze2025.Controls
         {
             using (var conn = new SqlConnection(connectionString))
             {
-                using (var cmd = new SqlCommand("SELECT COUNT(*) FROM LIBRI WHERE _codiceISBN = @isbn AND _idlettore=@lettore and datafine=null", conn))
+                conn.Open();
+                using (var cmd = new SqlCommand("SELECT COUNT(*) FROM PRESTITI WHERE _codiceISBN = @isbn AND _idlettore=@lettore and datafine=null", conn))
                 {
                     cmd.Parameters.AddWithValue("@isbn", prestito.CodiceISBN);
                     cmd.Parameters.AddWithValue("@lettore", prestito.IdLettore);
-                    conn.Open();
                     int count = (int)cmd.ExecuteScalar();
                     if (count > 0)
                     {
                         return false;
                     }
-                    conn.Close();
                 }
                 using (var cmd = new SqlCommand(@"INSERT INTO PRESTITI (_idlettore,_codiceISBN,datainizio,datafine) values(@lettore,@isbn,@inizio,@fine)", conn))
                 {
@@ -62,14 +61,12 @@ namespace CompitoVacanze2025.Controls
                     cmd.Parameters.AddWithValue("@inizio", prestito.DataInizio);
                     cmd.Parameters.AddWithValue("@fine", (object)prestito.DataFine ?? DBNull.Value); // Use DBNull.Value for null
 
-                    conn.Open();
                     cmd.ExecuteNonQuery();
                 }
                 using (var cmd = new SqlCommand("UPDATE LIBRI SET disponibile = @disponibile WHERE codiceISBN = @isbn", conn))
                 {
                     cmd.Parameters.AddWithValue("@isbn", prestito.CodiceISBN);
                     cmd.Parameters.AddWithValue("@disponibile", false);
-                    conn.Open();
                     return cmd.ExecuteNonQuery() == 1;
                 }
             }
@@ -88,13 +85,11 @@ namespace CompitoVacanze2025.Controls
                 {
                     cmd.Parameters.AddWithValue("@fine", prestito.DataFine);
                     cmd.Parameters.AddWithValue("@id", prestito.IdPrestito);
-                    conn.Open();
                 }
                 using (var cmd = new SqlCommand("UPDATE LIBRI SET disponibile = @disponibile WHERE codiceISBN = @isbn", conn))
                 {
                     cmd.Parameters.AddWithValue("@isbn", prestito.CodiceISBN);
                     cmd.Parameters.AddWithValue("@disponibile", true);
-                    conn.Open();
                     return cmd.ExecuteNonQuery() == 1;
                 }
             }

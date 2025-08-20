@@ -41,19 +41,20 @@
             this.btnRestituisci.Name = "btnRestituisci";
             this.btnRestituisci.Size = new System.Drawing.Size(116, 19);
             this.btnRestituisci.TabIndex = 12;
-            this.btnRestituisci.Text = "PRENDI IN PRESTITO";
+            this.btnRestituisci.Text = "RESTITUISCI";
             this.btnRestituisci.UseVisualStyleBackColor = true;
             this.btnRestituisci.Click += new System.EventHandler(this.btnRestituisci_Click);
             // 
             // dgvLibriInPrestito
             // 
             this.dgvLibriInPrestito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLibriInPrestito.Location = new System.Drawing.Point(156, 127);
+            this.dgvLibriInPrestito.Location = new System.Drawing.Point(11, 127);
             this.dgvLibriInPrestito.Margin = new System.Windows.Forms.Padding(2);
             this.dgvLibriInPrestito.Name = "dgvLibriInPrestito";
             this.dgvLibriInPrestito.RowHeadersWidth = 51;
-            this.dgvLibriInPrestito.Size = new System.Drawing.Size(317, 247);
+            this.dgvLibriInPrestito.Size = new System.Drawing.Size(626, 247);
             this.dgvLibriInPrestito.TabIndex = 11;
+            this.dgvLibriInPrestito.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibriInPrestito_RowEnter);
             // 
             // cmbLettori
             // 
