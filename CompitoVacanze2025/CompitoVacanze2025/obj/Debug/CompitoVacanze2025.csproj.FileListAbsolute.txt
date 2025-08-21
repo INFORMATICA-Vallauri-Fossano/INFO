@@ -18,3 +18,4 @@ C:\Users\Achar\Desktop\COMPITI 2025\INFO\CompitoVacanze2025\CompitoVacanze2025\b
 C:\Users\Achar\Desktop\COMPITI 2025\INFO\CompitoVacanze2025\CompitoVacanze2025\obj\Debug\CompitoVacanze2025.Views.Prestiti.resources
 C:\Users\Achar\Desktop\COMPITI 2025\INFO\CompitoVacanze2025\CompitoVacanze2025\obj\Debug\CompitoVacanze2025.exe.config
 C:\Users\Achar\Desktop\COMPITI 2025\INFO\CompitoVacanze2025\CompitoVacanze2025\obj\Debug\CompitoVacanze2025.Views.Restituzioni.resources
+C:\Users\Achar\Desktop\COMPITI 2025\INFO\CompitoVacanze2025\CompitoVacanze2025\obj\Debug\CompitoVacanze2025.Views.Sondaggi.resources

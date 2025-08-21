@@ -80,6 +80,7 @@
             this.Controls.Add(this.btnModifica);
             this.Controls.Add(this.btnInserimento);
             this.Name = "Master";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Master";
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
             this.ResumeLayout(false);

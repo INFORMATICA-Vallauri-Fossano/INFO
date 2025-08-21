@@ -51,7 +51,9 @@
             this.ucLibro.Copertina = "";
             this.ucLibro.DataPubblicazione = "10/08/2025 17:01:28";
             this.ucLibro.Disponibile = false;
+            this.ucLibro.Genere = 0;
             this.ucLibro.ISBN = "";
+            this.ucLibro.Lingua = "";
             this.ucLibro.Location = new System.Drawing.Point(12, 12);
             this.ucLibro.Name = "ucLibro";
             this.ucLibro.Pagine = "";
@@ -66,6 +68,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ucLibro);
             this.Name = "LibriManager";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LibriManager";
             this.Controls.SetChildIndex(this.btnInserimento, 0);
             this.Controls.SetChildIndex(this.btnModifica, 0);

@@ -22,7 +22,7 @@ namespace CompitoVacanze2025.Models
         public string Nome { get => nome;
             set
             {
-                if(RegexUtilities.IsSafeIdentifier(value)) nome = value;
+                if(RegexUtilities.CheckSafeSurname(value,50)) nome = value;
                 else throw new Exception("Nome non valido in questo sistema");
             }
         }

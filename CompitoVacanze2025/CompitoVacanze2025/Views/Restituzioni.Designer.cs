@@ -75,6 +75,7 @@
             this.Controls.Add(this.dgvLibriInPrestito);
             this.Controls.Add(this.cmbLettori);
             this.Name = "Restituzioni";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Restituzioni";
             this.Load += new System.EventHandler(this.Restituzioni_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibriInPrestito)).EndInit();

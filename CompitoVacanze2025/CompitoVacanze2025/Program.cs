@@ -19,13 +19,13 @@ namespace CompitoVacanze2025
             Application.SetCompatibleTextRenderingDefault(false);
             try
             {
-                Application.Run(new Restituzioni());
+                Application.Run(new MENU());
 
             }
             catch (Exception)
             {
                 MessageBox.Show("An error occured, restarting the program");
-                Application.Run(new Restituzioni());
+                Application.Run(new MENU());
             }
         }
     }

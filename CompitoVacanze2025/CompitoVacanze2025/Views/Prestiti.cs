@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AnrangoRamosLibrary;
+using System.Management.Instrumentation;
 
 namespace CompitoVacanze2025.Views
 {
@@ -54,12 +55,12 @@ namespace CompitoVacanze2025.Views
                         {
                             Close();
                         }
+                        libriFiltrati.Clear();
+                        cmbLettori.SelectedIndex = -1;
                     }
                     else
                     {
                         prestito.IdLettore = IdLettore;
-                        MessageBox.Show(string.Join(" | ", prestitiLettore.Select(p => p.ToString())));
-
                         filtraLibri();
                     }
 
@@ -73,25 +74,30 @@ namespace CompitoVacanze2025.Views
 
         private void filtraLibri()
         {
-            var filtered=libri.Where(l => l._IdGenere == IdGenere&&l.Disponibile==true).Select(l => new row
+            IEnumerable<Libro> filteredGenere=libri;
+            if (IdGenere != -1) filteredGenere = libri.Where(l => l._IdGenere == IdGenere);
+            var filtered=filteredGenere.Where(l=>l.Disponibile==true).Select(l => new row
             {
                 PK = l.CodiceISBN,
                 Titolo = l.Titolo,
                 Autori = string.Join(" - ", scritti.Where(s => s.CodiceISBN == l.CodiceISBN).Join(autori, s => s.IdAutore, a => a.Id, (s, a) => a.Cognome).ToList()),
-                Genere = cmbGeneri.SelectedText,
+                Genere = cmbGeneri.Text,
                 Lingua = l.Lingua,
                 Collocazione = l.Collocazione,
                 Copertina = l.Copertina
-            });
+            })
+                .ToList();
             libriFiltrati.Clear();
-            foreach (var l in filtered)
-            {
-                bool thereis = false;
-                string[] pronouns = cmbAutori.Text.Split(' ');
-                foreach (var pronoun in pronouns)
-                    if(l.Autori.Contains(pronoun)) thereis=true;
-                if(thereis) libriFiltrati.Add(l);
-            }
+            if (IdAutore != -1)
+                foreach (var l in filtered)
+                {
+                    bool thereis = false;
+                    string[] pronouns = cmbAutori.Text.Split(' ');
+                    foreach (var pronoun in pronouns)
+                        if (l.Autori.Contains(pronoun)) thereis = true;
+                    if (thereis) libriFiltrati.Add(l);
+                }
+            else foreach (var l in filtered) libriFiltrati.Add(l);
         }
 
         public Prestiti()
@@ -104,9 +110,17 @@ namespace CompitoVacanze2025.Views
             {
                 if(prestito==null) throw new Exception("Scegliere un libro e un lettore ");
                 if (MessageBox.Show("Vuoi davvero effettuare il prestito di: " + prestito.ToString(), "Conferma", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
                     if (PrestitiController.Create(prestito))
+                    {
                         MessageBox.Show("Prestito effettuato con successo");
+                        prestiti = PrestitiController.Read();
+                        libri = LibriController.Read();
+                        libriFiltrati.Clear();
+                        prestito = null;
+                    }
                     else throw new Exception("Il prestito non è stato effettuato riprovare");
+                }
             }
             catch (Exception ex)
             {
@@ -122,7 +136,7 @@ namespace CompitoVacanze2025.Views
             cmbLettori.SelectionStart = filter.Length;
             cmbLettori.DroppedDown = true;
         }
-       
+
         private void Prestiti_Load(object sender, EventArgs e)
         {
             lettoriWaiting = LettoriController.Read().ToDictionary(x => x.IdLettore, x => x.IdLettore + " : " + x.Cognome + " " + x.Nome).ToList();
@@ -130,18 +144,28 @@ namespace CompitoVacanze2025.Views
             cmbLettori.ValueMember = "Key";
             cmbLettori.DisplayMember = "Value";
 
-            cmbGeneri.DataSource = GeneriController.Read().ToDictionary(g=>g.IdGenere,g=>g.Genre).ToList();
+            cmbGeneri.DataSource = GeneriController.Read().ToDictionary(g => g.IdGenere, g => g.Genre).ToList()
+                .Concat(new[]{new  KeyValuePair<int, string>(-1, "Tutti i generi")})
+                .ToList();
             cmbGeneri.ValueMember = "Key";
             cmbGeneri.DisplayMember = "Value";
+            cmbGeneri.SelectedValue = -1;
 
-            cmbAutori.DataSource = AutoriController.Read().ToDictionary(a=>a.Id,a=>a.Nome+" "+a.Cognome).ToList();
+            cmbAutori.DataSource =
+                AutoriController.Read()
+                    .ToDictionary(a => a.Id, a => a.Nome + " " + a.Cognome)
+                    .ToList()
+                    .Concat(new[] { new KeyValuePair<int, string>(-1, "Tutti gli autori") })
+                    .ToList();
             cmbAutori.ValueMember = "Key";
             cmbAutori.DisplayMember = "Value";
+            cmbAutori.SelectedValue = -1;
 
             lettori_TextUpdate(null,null);
             cmbLettori.DroppedDown=false;
 
             dgvLibriPrestabili.DataSource = libriFiltrati;
+            filtraLibri();
             //events
             cmbAutori.SelectedValueChanged += cmbAutori_SelectedValueChanged;
             cmbGeneri.SelectedValueChanged += cmbAutori_SelectedValueChanged;
@@ -154,8 +178,16 @@ namespace CompitoVacanze2025.Views
 
         private void dgvLibriPrestabili_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex!=-1&&e.RowIndex<dgvLibriPrestabili.Rows.Count-1)
+            try
+            {
+                if(e.RowIndex!=-1&&e.RowIndex<dgvLibriPrestabili.Rows.Count-1)
                 prestito.CodiceISBN = dgvLibriPrestabili.Rows[e.RowIndex].Cells["PK"].Value.ToString();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nessun libro nella tabella");
+            }
         }
 
     }

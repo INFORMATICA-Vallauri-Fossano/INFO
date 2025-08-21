@@ -110,12 +110,12 @@ namespace CompitoVacanze2025.Models
             get => lingua;
             set
             {
-                if (!RegexUtilities.CheckSafeTitle(value,50)) lingua = value;
+                if (RegexUtilities.CheckSafeTitle(value,50)) lingua = value;
             }
         }
         public override string ToString()
         {
-            return $"{CodiceISBN} - {Titolo} - {NumeroPagine} pagine - {DataPubblicazione} - {Collocazione} - {Copertina} - {CasaEditrice} - Disponibile: {Disponibile}";
+            return $"{CodiceISBN} - {Titolo} - {NumeroPagine} pagine - {Lingua} - {DataPubblicazione} - {Collocazione} - {Copertina} - {CasaEditrice} - Disponibile: {Disponibile}";
         }
     }
 }

@@ -14,7 +14,7 @@ namespace CompitoVacanze2025.Controls
         static string dbName = Directory.GetParent(System.Reflection.Assembly.GetExecutingAssembly().Location).Parent.Parent.FullName.ToString() + @"\App_Data\dbBOOKS.mdf";
 
         private readonly static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + dbName + ";Integrated Security=True";
-
+                             
         static public List<Prestito> Read()
         {
             var prestiti = new List<Prestito>();
@@ -81,10 +81,12 @@ namespace CompitoVacanze2025.Controls
         {
             using (var conn = new SqlConnection(connectionString))
             {
+                conn.Open();
                 using (var cmd = new SqlCommand(@"UPDATE PRESTITI SET datafine = @fine WHERE idprestito = @id", conn))
                 {
                     cmd.Parameters.AddWithValue("@fine", prestito.DataFine);
                     cmd.Parameters.AddWithValue("@id", prestito.IdPrestito);
+                    cmd.ExecuteNonQuery();
                 }
                 using (var cmd = new SqlCommand("UPDATE LIBRI SET disponibile = @disponibile WHERE codiceISBN = @isbn", conn))
                 {

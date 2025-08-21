@@ -36,5 +36,17 @@ namespace CompitoVacanze2025
             Prestiti prestiti = new Prestiti();
             prestiti.ShowDialog();
         }
+
+        private void btnRestituzioni_Click(object sender, EventArgs e)
+        {
+            Restituzioni restituzioni = new Restituzioni();
+            restituzioni.ShowDialog();
+        }
+
+        private void btnSondaggi_Click(object sender, EventArgs e)
+        {
+            Sondaggi sondaggi = new Sondaggi();
+            sondaggi.ShowDialog();
+        }
     }
 }

@@ -41,7 +41,7 @@
             this.cmbAutori.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbAutori.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbAutori.FormattingEnabled = true;
-            this.cmbAutori.Location = new System.Drawing.Point(142, 48);
+            this.cmbAutori.Location = new System.Drawing.Point(255, 49);
             this.cmbAutori.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAutori.Name = "cmbAutori";
             this.cmbAutori.Size = new System.Drawing.Size(154, 21);
@@ -49,7 +49,7 @@
             // 
             // btnPresta
             // 
-            this.btnPresta.Location = new System.Drawing.Point(344, 70);
+            this.btnPresta.Location = new System.Drawing.Point(457, 71);
             this.btnPresta.Margin = new System.Windows.Forms.Padding(2);
             this.btnPresta.Name = "btnPresta";
             this.btnPresta.Size = new System.Drawing.Size(116, 19);
@@ -63,7 +63,7 @@
             this.cmbGeneri.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbGeneri.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbGeneri.FormattingEnabled = true;
-            this.cmbGeneri.Location = new System.Drawing.Point(308, 48);
+            this.cmbGeneri.Location = new System.Drawing.Point(421, 49);
             this.cmbGeneri.Margin = new System.Windows.Forms.Padding(2);
             this.cmbGeneri.Name = "cmbGeneri";
             this.cmbGeneri.Size = new System.Drawing.Size(152, 21);
@@ -72,18 +72,18 @@
             // dgvLibriPrestabili
             // 
             this.dgvLibriPrestabili.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLibriPrestabili.Location = new System.Drawing.Point(142, 93);
+            this.dgvLibriPrestabili.Location = new System.Drawing.Point(11, 94);
             this.dgvLibriPrestabili.Margin = new System.Windows.Forms.Padding(2);
             this.dgvLibriPrestabili.Name = "dgvLibriPrestabili";
             this.dgvLibriPrestabili.RowHeadersWidth = 51;
-            this.dgvLibriPrestabili.Size = new System.Drawing.Size(317, 247);
+            this.dgvLibriPrestabili.Size = new System.Drawing.Size(823, 247);
             this.dgvLibriPrestabili.TabIndex = 7;
             this.dgvLibriPrestabili.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibriPrestabili_RowEnter);
             // 
             // cmbLettori
             // 
             this.cmbLettori.FormattingEnabled = true;
-            this.cmbLettori.Location = new System.Drawing.Point(142, 26);
+            this.cmbLettori.Location = new System.Drawing.Point(255, 27);
             this.cmbLettori.Margin = new System.Windows.Forms.Padding(2);
             this.cmbLettori.Name = "cmbLettori";
             this.cmbLettori.Size = new System.Drawing.Size(318, 21);
@@ -95,7 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(845, 366);
             this.Controls.Add(this.cmbAutori);
             this.Controls.Add(this.btnPresta);
             this.Controls.Add(this.cmbGeneri);
@@ -103,6 +103,7 @@
             this.Controls.Add(this.cmbLettori);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Prestiti";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prestiti";
             this.Load += new System.EventHandler(this.Prestiti_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibriPrestabili)).EndInit();

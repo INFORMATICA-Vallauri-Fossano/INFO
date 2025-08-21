@@ -62,6 +62,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ucLettore);
             this.Name = "LettoriManager";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LettoriManager";
             this.Controls.SetChildIndex(this.btnInserimento, 0);
             this.Controls.SetChildIndex(this.btnModifica, 0);
